@@ -1,3 +1,7 @@
+let playerScore = 0;
+let computerScore = 0;
+let winner;
+
 function getComputerChoice() {
   const CHOICES = ["rock", "papper", "scissors"];
   const randomNumber = Math.floor(Math.random() * 3);
@@ -22,42 +26,41 @@ function playRound(playerSelection, computerSelection) {
   else return `You lose ${computerSelection} Beats ${playerSelection}`;
 }
 
-function game() {
+function game(playerSelection) {
   const winPattern = /win/i;
   const losePattern = /lose/i;
   const tiePattern = /Tie/;
   let winResult;
   let loseResult;
   let tieResult;
-  let playerScore = 0;
-  let computerScore = 0;
-  let winner;
 
-  for (let i = 0; i < 5; i++) {
-    const raundResult = playRound("rock", getComputerChoice());
-    winResult = winPattern.test(raundResult);
-    loseResult = losePattern.test(raundResult);
-    tieResult = tiePattern.test(raundResult);
+  const raundResult = playRound(playerSelection, getComputerChoice());
+  winResult = winPattern.test(raundResult);
+  loseResult = losePattern.test(raundResult);
+  tieResult = tiePattern.test(raundResult);
 
-    if (winResult) {
-      playerScore++;
-      console.log("playerSCore: ", playerScore)
-    } else if(loseResult) {
-      computerScore++;
-      console.log("computerScore: ", computerScore)
-    }else if(tieResult){
-        playerScore
-        computerScore
-    }
-
-    console.log(raundResult)
+  if (winResult === true) {
+    playerScore++;
+    console.log({ playerScore });
+  } else if (loseResult === true) {
+    computerScore++;
+    console.log({ computerScore });
+  } else {
+    playerScore;
+    computerScore;
   }
 
-  if (playerScore > computerScore)
-    return (winner = `The Player Wins! with a score of ${playerScore}`);
-  else {
-    return (winner = `The Computer Wins! with a score of ${computerScore}`);
+  console.log(raundResult);
+
+  if (playerScore === 5 ) {
+    winner = `The Player Wins! with a score of ${playerScore}`;
+    playerScore = 0;
+    computerScore = 0;
+    return winner
+  } else if(computerScore === 5){
+    winner = `The Computer Wins! with a score of ${computerScore}`;
+    computerScore = 0;
+    playerScore = 0;
+    return winner
   }
 }
-
-console.log(game());
