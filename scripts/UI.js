@@ -10,9 +10,9 @@ const rockImg = document.createElement("img");
 const papperImg = document.createElement("img");
 const scissorsImg = document.createElement("img");
 
-rockImg.src = "../assets/rock.png"
-papperImg.src = "../assets/paper.png"
-scissorsImg.src = "../assets/scissors.png"
+rockImg.src = "../assets/rock.PNG"
+papperImg.src = "../assets/papper.PNG"
+scissorsImg.src = "../assets/scissors.PNG"
 
 const GameResult = document.createElement("div");
 GameResult.classList.add("game-result");
