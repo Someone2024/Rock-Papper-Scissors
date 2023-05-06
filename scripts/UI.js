@@ -11,7 +11,7 @@ const papperImg = document.createElement("img");
 const scissorsImg = document.createElement("img");
 
 rockImg.src = "../assets/rock.png"
-papperImg.src = "../assets/paper.png"
+papperImg.src = "../assets/papper.png"
 scissorsImg.src = "../assets/scissors.png"
 
 const GameResult = document.createElement("div");
