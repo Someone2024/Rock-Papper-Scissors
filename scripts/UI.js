@@ -10,9 +10,9 @@ const rockImg = document.createElement("img");
 const papperImg = document.createElement("img");
 const scissorsImg = document.createElement("img");
 
-rockImg.src = "./assets/rock.PNG"
-papperImg.src = "./assets/papper.PNG"
-scissorsImg.src = "./assets/scissors.PNG"
+rockImg.src = "https://parkercon.github.io/rock-paper-scissors/images/rock.png"
+papperImg.src = "https://parkercon.github.io/rock-paper-scissors/images/paper.png"
+scissorsImg.src = "https://parkercon.github.io/rock-paper-scissors/images/scissors.png"
 
 const GameResult = document.createElement("div");
 GameResult.classList.add("game-result");
