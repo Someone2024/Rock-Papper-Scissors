@@ -63,4 +63,6 @@ function game(playerSelection) {
     playerScore = 0;
     return winner
   }
+
+  return raundResult;
 }
