@@ -4,7 +4,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url(../assets/papperBG.PNG);
+    background-image: url(../scripts/assets/papperBG.PNG);
     font-family: 'Gloria Hallelujah';
     display: flex;
     justify-content: center;
