@@ -1,5 +1,3 @@
-The game is finished here's a live preview
+# A simple rock Papper and scissors game made using HTML, CSS and Javascript
 
-https://someone2024.github.io/Rock-Papper-Scissors/
-
-# Rock-Papper-Scissors
+Here's a live preview: https://someone2024.github.io/Rock-Papper-Scissors/
