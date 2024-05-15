@@ -32,22 +32,24 @@ rockImg.classList.add("image");
 papperImg.classList.add("image");
 scissorsImg.classList.add("image");
 
+function awaitComputerChoice(SelectionNumber) {
+  GameResult.textContent = "Loading computer choice"
+  setTimeout(() => {
+    GameResult.textContent = game(PLAYERCHOICES[SelectionNumber]);
+    playerScoreP.textContent = `Player Score: ${playerScore}`;
+    computerScoreP.textContent = `Computer Score: ${computerScore}`;
+  }, 1000);
+}
 rockBtn.addEventListener("click", () => {
-  GameResult.textContent = game(PLAYERCHOICES[0]);
-  playerScoreP.textContent = `Player Score: ${playerScore}`;
-  computerScoreP.textContent = `Computer Score: ${computerScore}`;
+  awaitComputerChoice(0)
 });
 
 papperBtn.addEventListener("click", () => {
-  GameResult.textContent = game(PLAYERCHOICES[1]);
-  playerScoreP.textContent = `Player Score: ${playerScore}`;
-  computerScoreP.textContent = `Computer Score: ${computerScore}`;
+  awaitComputerChoice(1)
 });
 
 scissorsBtn.addEventListener("click", () => {
-  GameResult.textContent = game(PLAYERCHOICES[2]);
-  playerScoreP.textContent = `Player Score: ${playerScore}`;
-  computerScoreP.textContent = `Computer Score: ${computerScore}`;
+  awaitComputerChoice(2)
 });
 
 rockBtn.appendChild(rockImg);
