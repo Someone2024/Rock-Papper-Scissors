@@ -12,9 +12,3 @@
 3. The computer will generate its move.
 4. The result of the game (win, lose, or draw) will be displayed, along with the updated score.
 5. Play again by selecting another move.
-
-## Contributing
-Contributions to the Rock Paper Scissors Game are welcome! If you encounter any issues or have suggestions for improvement, please submit an issue or a pull request.
-
-## Acknowledgements
-- The game logic was inspired by the classic Rock Paper Scissors game.
